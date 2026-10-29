@@ -1,0 +1,9 @@
+project: savantenvs/nghttp3
+target: fuzz_qpackdecoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_qpackdecoder/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_qpackdecoder
+    libfuzzer: true
+    timeout: 5

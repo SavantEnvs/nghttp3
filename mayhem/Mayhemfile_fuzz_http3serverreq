@@ -1,0 +1,9 @@
+project: savantenvs/nghttp3
+target: fuzz_http3serverreq
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_http3serverreq/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_http3serverreq
+    libfuzzer: true
+    timeout: 5
